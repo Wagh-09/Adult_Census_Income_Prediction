@@ -6,7 +6,7 @@ h1{
     text-align: center;
 }
 body{
-    background: url("../images/Mushroom1.jpg");
+    background: url("../images/income.JPG");
     background-size: cover;
     background-repeat: no-repeat;
     display: flex;
@@ -97,4 +97,3 @@ form .button input:hover{
     left: 100%;
     margin-left: 10px; /* Adjust the spacing between select and image */
  }
- 
