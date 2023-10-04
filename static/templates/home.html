@@ -11,20 +11,16 @@
         <div class="title">Enter the details :</div><br>
         <form  id="form" action= "{{ url_for('Predict')}}" method="POST" >
         <div class="user-details">
-
             <div class="input">
-                <label class="input-name">age</label> 
-                <br>
-                <select name="age">
-                <input type="text" id="age" name="age" placeholder="Enter value (float)">
-    
-                </div>
-    
-                <br><br>
-
+            <label class="input-name">age</label> 
+            <input type="text" id="age" name="age" placeholder="Enter value (float)">
+            </div>
+            <br><br>
+                        
             <div class="input">
             <label class="input-name">workclass</label>
-            <select name="workclass" id="form">
+            <br>
+            <select name="workclass">
                 <option value="6">State-gov</option>
                 <option value="5">Self-emp-not-inc</option>
                 <option value="3">Private</option>
@@ -143,9 +139,7 @@
             <br><br>
         
             <div class="input">
-            <label class="input-name">capital_gain</label> 
-            <br>
-            <select name="capital_name">
+                <label class="input-name">capital_gain</label> 
                 <input type="text" id="capital_gain" name="capital_gain" placeholder="Enter value (float)">
 
             </div>
@@ -154,18 +148,15 @@
 
             <div class="input">
                 <label class="input-name">capital_loss</label> 
-                <br>
-                <select name="capital_loss">
-                    <input type="text" id="capital_loss" name="capital_loss" placeholder="Enter value (float)">
+                <input type="text" id="capital_loss" name="capital_loss" placeholder="Enter value (float)">
     
-                </div>
+            </div>
     
-                <br><br>
+            <br><br>
 
             <div class="input">
-            <label class="input-name">hours_per_week</label> 
-            <br>
-            <select name="hours_per_week">
+                <label class="input-name">hours_per_week</label> 
+            
                 <input type="text" id="hours_per_week" name="hours_per_week" placeholder="Enter value (float)">
 
             </div>
@@ -178,48 +169,48 @@
                 <br>
                 <select name="native_country">
                     <option value="38">United-States</option>
-                <option value="4">Cuba</option>
-                <option value="22">Jamaica</option>
-                <option value="18">India</option>
-                <option value="25">Mexico</option>
-                <option value="34">South</option>
-                <option value="32">Puerto-Rico</option>
-                <option value="15">Honduras</option>
-                <option value="8">England</option>
-                <option value="1">Canada</option>
-                <option value="10">Germany</option>
-                <option value="19">Iran</option>
-                <option value="29">Philippines</option>
-                <option value="21">Italy</option>
-                <option value="30">Poland</option>
-                <option value="3">Columbia</option>
-                <option value="0">Cambodia</option>
-                <option value="36">Thailand</option>
-                <option value="6">Ecuador</option>
-                <option value="24">Laos</option>
-                <option value="35">Taiwan</option>
-                <option value="13">Haiti</option>
-                <option value="31">Portugal</option>
-                <option value="5">Dominican-Republic</option>
-                <option value="7">El-Salvador</option>
-                <option value="9">France</option>
-                <option value="12">Guatemala</option>
-                <option value="2">China</option>
-                <option value="23">Japan</option>
-                <option value="40">Yugoslavia</option>
-                <option value="28">Peru</option>
-                <option value="27">Outlying-US(Guam-USVI-etc)</option>
-                <option value="33">Scotland</option>
-                <option value="37">Trinadad-Tobago</option>
-                <option value="11">Greece</option>
-                <option value="26">Nicaragua</option>
-                <option value="39">Vietnam</option>
-                <option value="16">Hong</option>
-                <option value="20">Ireland</option>
-                <option value="17">Hungary</option>
-                <option value="14">Holand-Netherlands</option>
+                    <option value="4">Cuba</option>
+                    <option value="22">Jamaica</option>
+                    <option value="18">India</option>
+                    <option value="25">Mexico</option>
+                    <option value="34">South</option>
+                    <option value="32">Puerto-Rico</option>
+                    <option value="15">Honduras</option>
+                    <option value="8">England</option>
+                    <option value="1">Canada</option>
+                    <option value="10">Germany</option>
+                    <option value="19">Iran</option>
+                    <option value="29">Philippines</option>
+                    <option value="21">Italy</option>
+                    <option value="30">Poland</option>
+                    <option value="3">Columbia</option>
+                    <option value="0">Cambodia</option>
+                    <option value="36">Thailand</option>
+                    <option value="6">Ecuador</option>
+                    <option value="24">Laos</option>
+                    <option value="35">Taiwan</option>
+                    <option value="13">Haiti</option>
+                    <option value="31">Portugal</option>
+                    <option value="5">Dominican-Republic</option>
+                    <option value="7">El-Salvador</option>
+                    <option value="9">France</option>
+                    <option value="12">Guatemala</option>
+                    <option value="2">China</option>
+                    <option value="23">Japan</option>
+                    <option value="40">Yugoslavia</option>
+                    <option value="28">Peru</option>
+                    <option value="27">Outlying-US(Guam-USVI-etc)</option>
+                    <option value="33">Scotland</option>
+                    <option value="37">Trinadad-Tobago</option>
+                    <option value="11">Greece</option>
+                    <option value="26">Nicaragua</option>
+                    <option value="39">Vietnam</option>
+                    <option value="16">Hong</option>
+                    <option value="20">Ireland</option>
+                    <option value="17">Hungary</option>
+                    <option value="14">Holand-Netherlands</option>
                 </select> 
-                </div>
+            </div>
         
         
            
