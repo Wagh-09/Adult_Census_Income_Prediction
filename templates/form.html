@@ -1,22 +1,46 @@
-<!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Adult Census Income Prediction</title>
-    <link rel="stylesheet" href="static/css/style.css"> 
+    <title>Income Prediction</title>
+    <div style="background-image: url(https://tse3.mm.bing.net/th?id=OIP.ifwGOtxk_tX5F5e2oPg_zAEsDU&pid=Api&P=0&h=180.jpg);">
+    <!-- BootStrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+
+    <!-- css -->
+    <link rel="stylesheet" href="static/css/styles.css">
+    
+
 </head>
+
 <body>
-    <h1>Adult Census Income Predictor</h1>
-    <form action="{{url_for('predict_datapoint')}}" method="POST"> <!-- Replace "predict.php" with your actual server-side script URL -->
+
+    <!-- As a heading -->
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="/">Adult Census Income Prediction</a>
+            </div>
+        </div>
+    </nav>
+
+    <br><br><br>
+
+
+    <div class="container">
+
+    <form action="{{url_for('predict_datapoint')}}" method="POST">
         <div class="form-group">
             <label for="age">age:</label>
-            <input type="number" id="age" name="age" placeholder="Enter value" required>
+            <input type="text" id="age" name="age" placeholder="Enter value">
         </div>
 
         <div class="form-group">
             <label for="workclass">workclass:</label>
-            <select id="workclass" name="workclass" required>
+            <select id="workclass" name="workclass">
                 <option value="6">State-gov</option>
                 <option value="5">Self-emp-not-inc</option>
                 <option value="3">Private</option>
@@ -26,7 +50,7 @@
                 <option value="7">Without-pay</option>
                 <option value="2">Never-worked</option>
             </select>
-        </div>
+        </div> 
 
         <div class="form-group">
             <label for="education_num">education_num:</label>
@@ -61,7 +85,7 @@
                 <option value="1">Married-AF-spouse</option>
                 <option value="6">Widowed</option>
             </select>
-        </div>
+        </div> 
 
         <div class="form-group">
             <label for="occupation">occupation:</label>
@@ -176,11 +200,31 @@
             </select>
         </div>
 
-        
+<!-- Submit -->
+<input type="submit" value="Submit Here" class="btn btn-secondary">
+</form>
 
-        <div class="form-group">
-            <button type="submit">Predict Income</button>
-        </div>
-    </form>
+<br>
+<br>
+<h3 style="color: black">{{ final_result }}</h3>
+
+<br>
+<br>
+<p>Kirti Wagh</p>
+
+
+    <!-- JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+    integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+    crossorigin="anonymous"></script>
+
+
 </body>
+
 </html>
