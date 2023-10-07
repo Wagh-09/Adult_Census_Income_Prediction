@@ -1,5 +1,7 @@
 from flask import Flask,render_template,request,jsonify
 from src.pipeline.prediction_pipeline import PredictPipeline,CustomData
+import numpy as np
+
 
 
 application = Flask(__name__)
@@ -28,16 +30,16 @@ def predict_datapoint():
 
         final_data = data.get_data_as_data_frame()
         predict_pipline = PredictPipeline()
-        pred = predict_pipline.predict(final_data)
+        pred = predict_pipline.predict(final_data=final_data)
 
-        result = pred
 
-        if result == 0:
-            return render_template("form.html",final_result = "Your Income is Less Then Equal To 50K: {}".format(result))
+        if pred == 0:
+            pred= "Your Income is Less Then Equal To 50K"
 
-        elif result == 1:
-            return  render_template("form.html",final_result = "Your Income is More Then 50K: {}".format(result))
-
+        elif pred == 1:
+            pred= "Your Income is More Then 50K"
+            
+        return render_template("form.html",final_result =pred)
 
 if __name__=="__main__":
-    app.run(host="0.0.0.0",debug=True)
+    app.run(host="0.0.0.0",port=8000)
