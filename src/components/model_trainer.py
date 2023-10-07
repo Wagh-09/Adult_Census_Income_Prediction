@@ -48,12 +48,12 @@ class ModelTrainer:
                 },
                 "Decision Tree":{
                     "class_weight":["balanced"],
-                    "criterion":['gini',"entropy","log_loss"],
+                    "criterion":['gini',"entropy"],
                     "splitter":['best','random'],
                     "max_depth":[3,4,5,6],
                     "min_samples_split":[2,3,4,5],
                     "min_samples_leaf":[1,2,3],
-                    "max_features":["auto","sqrt","log2"]
+                    "max_features":["sqrt","log2"]
                 },
                 "Logistic":{
                     "class_weight":["balanced"],
